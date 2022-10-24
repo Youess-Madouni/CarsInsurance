@@ -1,0 +1,45 @@
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<input type="checkbox" id="check">
+<label for="check" class="chekbtn">
+    <i class="fas fa-bars"></i>
+</label>
+<nav style="background-color: #000000;" class="navbar navbar-dark  ">
+    <!-- <h4 class="navbar-brand text-white" routerLink="/acceuil">Logo</h4> -->
+    
+    <div  class="navbar-logo" style="border: none; cursor: pointer;">
+        <img routerLink="/acceuil" width="120px" height="60px" src="../../../assets/images/logo.png">
+    </div>
+   
+    <ul>
+        <li><a class=" text-white  " routerLink="/acceuil">Home</a></li>
+        <li><a class="text-white"  routerLink="/propos">About us</a></li>
+        <li><a class="text-white"  routerLink="/contact">Contact Us</a></li>
+      
+        
+    </ul>
+    <!-- <a class="text-white"  routerLink="/propos">propos</a> -->
+    
+    <div class="navbar-inverse">
+    <!-- <a   routerLink="/login" class="text-white p-3">
+             Login
+        </a> -->
+    
+
+    <button type="button" routerLink="/login" class="btn btn-link" *ngIf="!loggedIn">
+            Signin
+    </button>
+        <!-- <a routerLink="/registre" class="text-white ">
+             Sign Up
+        </a> -->
+    <button type="button" routerLink="/registre" class="btn btn-link" *ngIf="!loggedIn">
+            Registre    
+    </button>
+    <button (click)="onLogout()" type="button"  class="btn btn-link" *ngIf="loggedIn">
+            Logout
+    </button>
+
+    </div>
+</nav>
+

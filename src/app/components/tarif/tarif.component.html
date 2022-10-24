@@ -1,0 +1,73 @@
+
+       
+
+
+
+<div class="simulateur-container">
+
+<div class="simulateur-content">
+
+
+<div  class="simulateur-header">
+<p class="simulateur-title">Votre tarif estimé</p>
+</div>
+
+<div class="simulateur-body">
+
+<h4 style="text-align : center;">Votre tarif selon votre formulaire choissez : </h4>
+
+
+
+
+<div class="tt">
+   <div *ngFor="let v of voitures">
+      <div [ngSwitch]="v.name && v.type">
+        <div *ngSwitchCase=" 'f1'">
+            <span> ferrari f1 {{tarif_ferrari_f1 | currency:'dh'}}</span>
+        </div>
+        <div *ngSwitchCase=" 'f2'">
+          <span> ferrari f2 {{tarif_ferrari_f2}}</span>
+       </div>
+        <div *ngSwitchCase="'f3'">
+           <span>  ferrari f3 {{tarif_ferrari_f3}}</span>
+        </div>
+        <div *ngSwitchCase="'l1'">
+          <span> lamborghini l1 {{tarif_lamborghini_l1}}</span>
+       </div>
+       <div *ngSwitchCase="'l2'">
+          <span> lamborghini l2 {{tarif_lamborghini_l2}}</span>
+       </div>
+       <div *ngSwitchCase="'l3'">
+          <span> lamborghini l3 {{tarif_lamborghini_l3}}</span>
+       </div>
+       <div *ngSwitchCase="'m1'">
+          <span>  mercedes m1 {{tarif_mercedes_m1}}</span>
+       </div>
+       <div *ngSwitchCase="'m2'">
+          <span>  mercedes m2 {{tarif_mercedes_m2}}</span>
+       </div>
+       <div *ngSwitchCase="'m3'">
+          <span>  mercedes m3 {{tarif_mercedes_m3}}</span>
+       </div>
+      </div>
+   </div>
+   
+</div>
+     
+</div>
+
+
+
+
+</div>
+</div>
+
+
+ 
+
+
+
+  
+
+
+    

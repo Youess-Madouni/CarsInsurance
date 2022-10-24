@@ -1,0 +1,381 @@
+  <body>
+    <form>
+    <div class="all" style="border: none; height: 1090px ">
+  <section class="info-vehicule">
+    <h3 class="titre">
+      <span class="number-span">1</span>
+      Info 
+      <span>sur la véhicule</span>
+    </h3>
+    <hr style="max-width: 75%; margin: auto;">
+    </section>
+    <div class="form_simu" id="step1"></div>
+
+    <!--div class="col-md-3" >
+      <label for="">Marque du véhicule</label>
+    <select [(ngModel)]="tom.voiture" class="form-select">
+      <option selected>-Marque-</option>
+      <option value="mercedes">mercedes</option>
+      <option value="ferrari">ferrari</option>
+      <option value="lamborghini">lamborghini</option>
+    </select>
+    </div-->
+    <!-- Marque du véhicule -->
+    <div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; bottom: 30px; left: 50px; ">
+    <div  class=" marque-vehicule" style=" border: none;  max-width: 300px; transform: translate(100%); position: relative; bottom: 10px;">
+      
+   
+    <label for="name" style="transform: translate(-175px,30px);">Marque du véhicule</label>
+      <select   name="name"  [(ngModel)]="vehicule.name" class="form-select"  aria-label="Default select example">
+        <option   aria-selected="true">-Marque-</option>
+        <option value="ferrari">ferrari</option>
+        <option  value="mercedes">mercedes</option>
+        <option   value="lamborghini">lamborghini</option>
+       
+      </select>
+     </div>
+     
+     <!-- Modèle du véhicule -->
+
+     <div class="modele-vehicule" style="  max-width: 450px; transform: translate(190%); position: relative; bottom: 74px;">
+      
+      <div class="modele-vehicule">
+        <div class="row">
+          <div [ngSwitch]="vehicule.name">
+            <div *ngSwitchCase="'mercedes'">
+              <label style="transform: translate(-175px,30px);"> Modèle du véhicule </label>
+              <div class="col-md-9 ">
+                <select name="type"  [(ngModel)]="vehicule.type"  class="form-select">
+                  <option selected>-Modèle-</option>
+                  <option  value="m1">m1</option>
+                  <option value="m2">m2</option>
+                  <option value="m3">m3</option>
+                </select>
+              </div>
+            </div>
+      
+            <div *ngSwitchCase="'ferrari'">
+              <label for="type"style="transform: translate(-175px,30px);"> Modèle du véhicule </label>
+              <div class="col-md-9 ">
+                <select  [(ngModel)]="vehicule.type" name="type" class="form-select">
+                  <option value="f1">f1</option>
+                  <option value="f2">f2</option>
+                  <option value="f3">f3</option>
+                </select>
+              </div>
+            </div>
+            <div *ngSwitchCase="'lamborghini'">
+              <label for="type" style="transform: translate(-175px,30px);"> Modèle du véhicule </label>
+              <div class="col-md-9">
+                <select  [(ngModel)]="vehicule.type"  name="type" class="form-select">
+                  <option value="l1">l1</option>
+                  <option value="l2">l2</option>
+                  <option value="l3">l3</option>  
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+  <!-- Ville de résidence -->
+
+<div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; bottom: 10px; left: 50px; ">
+  <div  class=" date-circu" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 10px;">
+ 
+  <label for="date" style="transform: translate(-175px,25px);">Date de mise en circulation</label>
+  <input  name="date" [(ngModel)]="vehicule.date"  type="date"  min="1998-01-01" max="2021-05-28" id="edit-date-circulation" size="60" maxlength="128" class="form-control required filled" required="required" aria-required="true" style="font-size: 12px; position: relative;left: 50px;bottom: 4px;">
+   </div>
+  
+   <div class="ville-res" style="  max-width: 450px; transform: translate(190%); position: relative; bottom: 74px;">
+    
+      <label for="ville" style="transform: translate(-175px,30px);">Ville de résidence</label>
+      <div class="col-md-9">
+        <select name="ville"  [(ngModel)]="vehicule.ville" class="form-select">
+          <option aria-selected="true">-Selectionner-</option>
+          <option value="kenitra">kenitra</option>
+          <option value="sale">sale</option>
+        </select>
+       </div>
+    </div>
+  </div>
+     <!-- Type de Carburant -->
+  <div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; top: 10px; left: 50px; ">
+  
+    <div  class=" type-carb" style="  max-width: 300px; transform: translate(100%); position: relative;left: 210px; bottom: 10px;">
+      
+      <label for="carbourant" style="transform: translate(-175px,30px);">Type de Carburant </label>
+        
+          <select  name="carbourant" [(ngModel)]="vehicule.carbourant" class="form-select" aria-label="Default select example">
+            <option aria-selected="true">-Selectionner-</option>
+            <option  value="ESSENCE">ESSENCE</option>
+            <option value="DIESEL">DIESEL</option>
+            <option value="ELECTRIQUE">ELECTRIQUE</option>
+
+          </select>
+  
+           
+      <!-- <button [(ngModel)]="essence" type="button" class="btn btn-outline-primary">ESSENCE</button>
+      <button [(ngModel)]="diesel" style="transform: translate(120px); bottom: 42px; position: relative; left: 200px;" type="button" class="btn btn-outline-primary">DIESEL</button>
+      <button [(ngModel)]="electrique" style="transform: translate(120px,-13px);bottom: 72px; position: relative; left: 520px;" type="button" class="btn btn-outline-primary">ELECTRIQUE</button> -->
+    
+       </div>
+  
+  
+  </div>
+
+  <!-- Puissance-Fiscal -->
+
+  <div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; top: 30px; left: 50px; ">
+  <div class="pppp" style="  max-width:900px; margin: auto;">
+  <div  class="psuiss-fisc" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 10px;">
+   
+    <label for="fiscale" style="transform: translate(-175px,30px);">Puissance fiscale </label>
+    
+    <select  name="fiscale" [(ngModel)]="vehicule.fiscale" class="form-select" aria-label="Default select example">
+      <option aria-selected="true">-Selectionner-</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+     </div>
+    </div>
+</div>
+
+<!-- Disposez vous d’une assurance Auto  ? -->
+
+<div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; top: 55px; left: 43px; ">
+  
+  <div  class=" type-carb" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 40px; left: 150px;">
+    
+    <label for="diposation" style="transform: translate(-300px,50px);  white-space: nowrap;">Disposez vous d’une assurance Auto  ?</label>
+    <select name="diposation"  [(ngModel)]="vehicule.diposation"  class="form-select" aria-label="Default select example"style= "position: relative; top: 20px; left:66px">
+      <option aria-selected="true">-Selectionner-</option>
+      <option  value="OUI">OUI</option>
+      <option  value="NON">NON</option>
+
+    </select>
+</div>
+</div>
+ 
+<!-- Client CIN -->
+<div>
+</div>
+<div [ngSwitch]="vehicule.diposation">
+ <div *ngSwitchCase="'NON'">
+  <div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; top: 55px; left: 43px; ">
+  
+    <div  class="MatCin" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 40px; left: 150px;">
+      
+      <label for="cin" style="transform: translate(-400px,50px);  white-space: nowrap;">Renseigner votre numéro de CIN
+      </label>
+          
+        <input name="cin" [(ngModel)]="vehicule.cin" type="text" class="Num_cin" style="width: 220px; transform:translate(80px,20px); border-radius: 50px; color: blue; text-align: center; font-weight: bolder;">
+  </div>
+  </div>
+  
+  <!-- Client-Matriculation -->
+  
+   <div class="col-md-4 form-control" style="  border: none; width: 95%;height: 70px;   position: relative; top: 55px; left: 43px; ">
+    
+    <div  class="MatCin" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 40px; left: 150px;">
+      
+      <label for="matricule" style="transform: translate(-400px,50px);  ">Renseigner l’immatriculation du véhicule assuré
+        (sous la forme XXX-X-XXX)
+        
+      </label>
+          
+        <input  name="matricule" [(ngModel)]="vehicule.matricule" type="text" class="Matricul_vehicule" style="width: 220px; transform:translate(80px,10px); border-radius: 50px; color: blue; text-align: center; font-weight: bolder;">
+  </div>
+  </div>
+ </div>
+</div>
+
+
+<!-- le nombred'accidents dont vous étiez responsable-->
+<div class="col-md-4 form-control" style="  border: none; width: 95%;height: 100px;   position: relative; top: 90px; left: 43px; ">
+  
+  <div  class="MatCin" style="  max-width: 300px; transform: translate(100%); position: relative; bottom: 40px; left: 150px;">
+    
+    <label for="accident" style="transform: translate(20px,50px); white-space: nowrap; ">
+      Indiquez le nombre d'accidents dont vous étiez responsable
+    </label>
+      
+</div>
+
+<!--  Dégats matériels -->
+
+<div  class="Dega-corp"  style="  max-width: 190px; transform: translate(100%); position: relative; left : 90px; bottom: 20px;">
+   <select name="accident"  [(ngModel)]="vehicule.accident" class="form-select" aria-label="Default select example" style="position: relative; top: 20px; right: 40px;">
+    <option aria-selected="true">-Selectionner-</option>
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+  <label for="degat"  style="transform: translate(-200px,-10px);"> Dégats matériels</label>
+   </div>
+
+   <!-- Dégats corporels -->
+   <div  class="Dega-corp"  style="  max-width: 190px; transform: translate(100%); position: relative; left : 850px; bottom: 60px;">
+    <select name="degat" [(ngModel)]="vehicule.degat" class="form-select" aria-label="Default select example">
+      <option aria-selected="true">-Selectionner-</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <label for="" style="transform: translate(-135px,-30px);"> Dégats corporels</label>
+    
+  </div>
+
+</div>
+<!-- Button-Confirmer -->
+<!-- <div class="col-md-4 form-control" style="border:none; width: 95%;height: 100px;   position: relative; top: 90px; left: 43px; ">
+
+  <button type="button" class="btn btn-primary" style="  width: 350px;position: relative; left: 450px; top: 25px;">Confirmer</button>
+
+</div> -->
+
+
+<!-- Step-2-Votre choix de garanties -->
+
+
+<section class="info-vehicule" style="position: relative; top: 10px;"  >
+  <h3  class="titre">
+    <span  class="number-span">2</span>
+    Votre
+    <span>Choix de garanties</span>
+  </h3>
+  <hr style="max-width: 75%; margin: auto;">
+  </section>
+
+<!-- panel-body -->
+<div class="panel-heading" >
+  <div class="col-md-6 col-sm-6 col-xs-6 garantie-forme-1" style=" font-weight: bold; color:#003861;"> 
+    Formules</div>
+  <div class="col-md-6 col-sm-6 col-xs-6 garantie-forme-2" style=" font-weight: bold; color:#003861;">Garanties</div>
+</div>
+
+<!-- Les Garnaties  -->
+
+<div class="col-md-6 col-sm-4 col-xs-12" style=" padding-top: 10px; position:relative; left: 690px; max-width: 500px;height: 693px;  margin-top: 0px;
+ border-bottom:  solid rgb(187, 180, 180);border-left: 2px solid rgb(187, 180, 180) ;
+ border-right: solid rgb(187, 180, 180);">
+  <!-- Garanties 1 -->
+  <div class="garanties-1" style="height: 180px; border-bottom: 4px solid rgb(187, 180, 180); margin-bottom: 10px;">
+  <p class="Rs-civil" >Responsabilité Civil</p>
+  <p class="Rs-civil" >Protection Juridique</p>
+  <p class="Rs-civil" >Protection du Conducteur et des Passagers</p>
+  <p class="Rs-civil">Événements Catastrophiques adossés à la RC</p>
+</div>
+   <!-- Garanties 2 -->
+   <div class="garanties-2" style="height: 245px;border-bottom: 4px solid rgb(187, 180, 180); margin-bottom: 20px;">
+   <p class="Rs-civil" >Vol</p>
+  <p class="Rs-civil" >Incendie</p>
+  <p class="Rs-civil" >Bris de glaces</p>
+  <p class="Rs-civil">Dommages collision</p>
+  <p class="Rs-civil">Évènements catastrophiques adossés aux GA</p>
+  <p><input class="form-check-input" type="radio" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <label style="margin-left: 10px;" class="form-check-label" for="flexSwitchCheckCheckedDisabled">Formule Initiale</label>
+  </p>
+</div>
+<!-- Garanties 3 -->
+<div class="garanties-3" style="  margin-top: 40px;">
+  <p class="Rs-civil" >Dommages au véhicule</p>
+ <p><input class="form-check-input" type="radio" id="flexSwitchCheckCheckedDisabled" checked disabled>
+ <label style="margin-left: 10px;" class="form-check-label" for="flexSwitchCheckCheckedDisabled">Formule Initiale</label>
+ </p>
+ <p><input  class="form-check-input" type="radio" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <label style="margin-left: 10px;" class="form-check-label" for="flexSwitchCheckCheckedDisabled">Formule Essentielle</label>
+</div>
+</div>
+
+<!-- Les Formules -->
+<!-- Formule Initiale -->
+  <div class="col-md-6 col-sm-4 col-xs-12" style=" margin-bottom: 1px; right: 0px; height: 693px;
+  transform: translate(-10px);
+    border-bottom:  solid rgb(187, 180, 180);border-left: 4px solid rgb(187, 180, 180) ;
+    position: relative; max-width: 500px;right:290px ;">
+    <div class="formule_type" style="height: 190px; border-bottom: 4px solid rgb(187, 180, 180);">
+      <div class="checkbox">
+        <label for="">
+          <div style="margin-top: 50px; transform: translate(-130px,30px);" >
+          <input   [(ngModel)]="vehicule.f_initial" style="height: 30px; width: 30px;" class="form-check-input" type="radio" value=" Initiale" name="checked" id="flexCheckDefault">
+          <img src="../../../assets/images/car.png" style="height: 35px; width: 35px;margin-left: 30px; transform: translate(20px);">
+        </div>
+          <h5 style=" transform: translate(90px);">Formule
+          Initiale
+        </h5>
+        </label>
+    </div>
+</div>
+<!-- formule Essentielle -->
+<div class="formule_type" style="height: 255px; border-bottom: 4px solid rgb(187, 180, 180);">
+  <div class="checkbox">
+    <label for="">
+      <div style="margin-top: 50px; transform: translate(-130px,30px);max-width: 200px;" >
+      <input [(ngModel)]="vehicule.f_essentielle" name="checked" style="height: 30px; width: 30px;" class="form-check-input" type="radio" value=" Essentielle" id="flexCheckDefault">
+      <img src="../../../assets/images/car.png" style="height: 35px; width: 35px;margin-left: 30px; transform: translate(20px);">
+    </div>
+      <h5 style=" transform: translate(90px);">Formule
+      Essentielle
+    </h5>
+    </label>
+</div>
+</div>
+<!-- Formule Tous Risques -->
+<div class="formule_type" style="height: 250px;">
+  <div class="checkbox">
+    <label for="">
+      <div style="margin-top: 50px;transform: translate(-130px,30px);max-width: 200px;" >
+      <input [(ngModel)]="vehicule.f_risque" name="checked" style="height: 30px; width: 30px;" class="form-check-input" type="radio" value=" Tous Risques" id="flexCheckDefault">
+      <img src="../../../assets/images/car.png" style="height: 35px; width: 35px;margin-left: 30px; transform: translate(20px);">
+    </div>
+      <h5 style=" transform: translate(90px);">Formule
+      Tous Risques
+    </h5>
+    </label>
+</div>
+</div>
+
+</div>
+
+<!--  -->
+<div class="col-md-4 form-control" style="border:none; width: 95%;height: 100px;   position: relative; top:750px; left: 43px; ">
+
+  <button (click)="newAdd()"  type="button" class="btn btn-primary" style="  width: 350px;position: absolute; left: 450px; ">Confirmer</button>
+
+</div>
+</div>
+</form >
+</body>
+
+
+
+
+<!-- 
+   <div [ngSwitch]="aaa">
+      <div *ngSwitchCase="'laravel'">hello</div>
+      <div *ngSwitchCase="'angular'">hsssss</div>
+      <div *ngSwitchCase="'symfony'">aaaaa</div>
+    </div>
+ -->

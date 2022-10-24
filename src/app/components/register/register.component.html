@@ -1,0 +1,122 @@
+
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        <div class="login-form">
+        <form #client="ngForm" (ngSubmit)="onCreate()">
+            <div class="form-group">
+                <label for="email"> Email </label>
+                <input
+                 [(ngModel)]="email"
+                  type="text" 
+                  class="form-control"
+                   id="email"
+                    name="email"
+                   #clientEmail="ngModel"
+                    required
+                    [ngClass]="{'is-invalid': clientEmail.errors && clientEmail.touched}"
+                    >
+                 <div [hidden]="!clientEmail.errors?.required" class="invalid-feedback">
+                     ce champ est obligatoire
+                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password"> password </label>
+                <input
+                 [(ngModel)]="password" 
+                 type="password" 
+                 class="form-control" 
+                 id="password" 
+                 name="password"
+                 #clientPassword="ngModel"
+                 required
+                 minlength="6"
+                 [ngClass]="{'is-invalid':clientPassword.errors && clientPassword.touched}"
+                 >
+                 <div [hidden]="!clientPassword.errors?.required" class="invalid-feedback">
+                     ce champs est obligatoire
+                 </div>
+                 <div [hidden]="!clientPassword.errors?.minlength" class="invalid-feedback">
+                    le mot de pass contient au minumum 6 caractere
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="form_btn btn btn-primary" [disabled]="!client.valid">
+                    Registre
+                </button>
+
+                <!-- <a routerLink="/login"> do you have account ?</a> -->
+            </div>
+        </form>
+        <p>Do you have  account ?<a routerLink="/login">Login</a></p>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <div id="insc" >
+    <div class="col-sm-4">
+        <div class="signup_form">
+            <form >
+                <div class="form-group">
+                    <label class="label_txt">Nom</label>
+                    <input type="text" class="form-control" id="fname" required="">
+                </div>
+
+                <div class="form-group">
+                    <label class="label_txt">Prénom</label>
+                    <input type="text" class="form-control" id="lname" required="">
+                </div>
+
+                <div class="form-group">
+                    <label class="label_txt">Numèro Cin</label>
+                    <input type="text" class="form-control" name="" id="username" required="">
+                </div>
+
+                <div class="form-group">
+                    <label class="label_txt">Adresse Email</label>
+                    <input type="email" class="form-control" name="" id="email" required="">
+                </div>
+                <div class="form-group">
+                    <label class="label_txt">Mot de Passe</label>
+                    <input type="password" class="form-control" id="passowrd" required="">
+                </div>
+                <button  name="signup" class="btn btn-primary btn-group-lg form_btn" id="SignUp">SignUp</button>
+                <p>Have an account? <a href="login.php">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+ -->

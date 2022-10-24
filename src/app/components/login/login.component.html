@@ -1,0 +1,102 @@
+<!-- 
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3" (click)="chercher='dacia' ">
+             dacia
+        </div>
+        <div class="col-md-3" (click)="chercher='ferrari' ">
+              ferrari
+        </div>
+        <div class="col-md-3" (click)="chercher='lamborghini' ">
+            lamborgini
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+           <div [ngSwitch]="chercher">
+               <div *ngSwitchCase="'dacia'">
+                   <ul class="list-group">
+                       <li class="list-group-item active">dacia 1</li>
+                       <li class="list-group-item">dacia 2</li>
+                       <li class="list-group-item disabled">dacia 3</li>
+                   </ul>
+               </div>
+               <div *ngSwitchCase="'ferrari'">
+                   <ul class="list-group">
+                       <li class="list-group-item active">ferrari 1</li>
+                       <li class="list-group-item">ferrari2</li>
+                       <li class="list-group-item disabled">ferrai 3</li>
+                   </ul>
+               </div>
+               <div *ngSwitchCase="'lamborghini'">
+                   <ul class="list-group">
+                       <li class="list-group-item active">aventador</li>
+                       <li class="list-group-item">huracan</li>
+                       <li class="list-group-item disabled">urus</li>
+                   </ul>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+ -->
+
+
+ <div id="log">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+            <div class="login-form">
+               
+
+            <form #client="ngForm" (ngSubmit)="onLogin()">
+            <div class="mb-3">
+                <label class="label_txt"> Email</label>
+                <input
+                 [(ngModel)]="email" 
+                type="email" 
+                class="form-control"
+                 id="email" 
+                name="email"
+                #clientEmail="ngModel"
+                required
+                [ngClass]="{'is-invalid': clientEmail.errors && clientEmail.touched}"
+                 >
+                 <div [hidden]="!clientEmail.errors?.required" class="invalid-feedback">
+                    ce champ est obligatoire
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="label_txt">Password</label>
+                <input 
+                [(ngModel)]="password" 
+                type="password" 
+                class="form-control"
+                 id="password"
+                 name="password"
+                 #clientPassword="ngModel"
+                 required
+                 minlength="6"
+                 [ngClass]="{'is-invalid':clientPassword.errors && clientPassword.touched}"
+                 >
+                 <div [hidden]="!clientPassword.errors?.required" class="invalid-feedback">
+                    ce champs est obligatoire
+                </div>
+                <div [hidden]="!clientPassword.errors?.minlength" class="invalid-feedback">
+                   le mot de pass contient au minumum 6 caractere
+               </div>
+            </div>
+            <button name="Login" id="LogIn" class=" form_btn btn btn-primary" [disabled]="!client.valid">
+                Login
+            </button>
+            </form>
+            <p>D'ont have an account ?<a routerLink="/registre">SignUp</a></p>
+            </div>
+            </div>
+           
+    </div>
+</div>

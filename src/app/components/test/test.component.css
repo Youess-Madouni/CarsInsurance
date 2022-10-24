@@ -1,0 +1,78 @@
+.info-vehicule {
+  text-align: center;
+  margin-top: 50px;
+  transform: translate(0px, 50px);
+}
+.info-vehicule label {
+  position: relative;
+  right: 400px;
+  transform: translateY(150%);
+}
+.number-span {
+  background-color: #369200a6;
+  color: #ffffffab;
+  font-size: 23px;
+  padding: 4px 12px;
+  line-height: 50px;
+  border-radius: 55%;
+  margin-right: 15px;
+  box-shadow: 0px 0px 18px rgb(32 96 165 / 20%);
+  font-family: "open_sansbold";
+}
+.form_simu {
+  border: none;
+  width: 95%;
+  height: 70px;
+  margin-bottom: 40px;
+  position: relative;
+  left: 50px;
+}
+/* .col-md-3 {
+  border: 2px solid #4403f7;
+  margin-left: 450px;
+}
+.col-md-3 label {
+  position: relative;
+  top: 50px;
+  left: 200px;
+} */
+/*.modele-vehicule {
+  border: 2px solid black;
+  width: 95%;
+  height: 50px;
+  position: relative;
+  left: 50px;
+}*/
+.type-carb {
+  margin-bottom: 150px;
+}
+.btn {
+  border-radius: 50px;
+}
+.col-md-6 {
+  border-bottom: solid rgb(187, 180, 180);
+  height: 40px;
+  text-align: center;
+}
+.row {
+  border-left: 1px;
+}
+.panel-heading {
+  margin-top: 100px;
+
+  border-bottom-left-radius: 3px black;
+  border-top-right-radius: 3px;
+  width: 75%;
+  position: relative;
+  left: 15%;
+}
+.col-md-6 {
+  float: left;
+  width: 49%;
+}
+.col-xs-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}

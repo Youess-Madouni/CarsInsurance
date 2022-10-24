@@ -1,0 +1,68 @@
+*{
+    border-sizing : border-box;
+}
+
+
+.simulateur-navbar{
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    background-color: #fff;
+    display: flex;
+}
+.simulateur-navbar-logo-img{
+    padding-left: 3%;
+}
+.quitter-btn{
+    padding-right: 3%;
+}
+.btn-outline-dark
+{
+    width: 160px;
+    border: none;
+    font-size : 1.5em;
+}
+.simulateur-content{
+    display: flex;
+     flex-direction: column;
+     background-image: url("../../../assets/images/tarif-image.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 900px;
+   
+}
+.simulateur-container{
+   
+    align-items: center;
+    justify-content: center;
+    
+    background-repeat: no-repeat;
+    background-color: #fff;
+
+}
+
+.simulateur-title{
+    margin-top: 4vw;
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+.simulateur-header{
+    text-align : center;
+    margin-bottom : 50px;
+}
+.simulateur-body{
+align-self: center;
+min-width: 55vw;
+margin: 5px 0 25% 5px;
+padding: 6vh;
+border-radius: 12px;
+box-shadow: 0 0 18px 0 rgb(0 0 0 / 15%);
+background-color: #fff;
+z-index: 2;
+min-height: 45vh;
+
+}
+.simulateur-body .tt{
+ text-align : center;
+ font-size:130px;
+}
